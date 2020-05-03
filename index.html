@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icon-font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/book-favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/589850ed4a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script async src="js/main.js"></script>
+
+    <title>Book Reader</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <a
+        id="logo-link"
+        onmouseover="PlaySound('book-reader')"
+        onmouseout="StopSound('book-reader')"
+        href="index.html"
+      >
+        <h1 class="logo">
+          <span class="text-primary">
+            <i class="fas fa-book-open"></i> Book</span
+          >Reader
+        </h1>
+      </a>
+
+      <ul>
+        <li>
+          <a
+            onmouseover="PlaySound('home')"
+            onmouseout="StopSound('home')"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('books')"
+            onmouseout="StopSound('books')"
+            href="books.html"
+            >Books</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('about')"
+            onmouseout="StopSound('about')"
+            href="#about"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('contact')"
+            onmouseout="StopSound('contact')"
+            href="#contact"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <audio id="home" src="audio/home.mp3"></audio>
+    <audio id="books" src="audio/books.mp3"></audio>
+    <audio id="about" src="audio/about.mp3"></audio>
+    <audio id="contact" src="audio/contact.mp3"></audio>
+    <audio id="book-reader" src="audio/book-reader.mp3"></audio>
+    <audio id="secondary-heading" src="audio/heading-secondary.mp3"></audio>
+    <audio id="main-button" src="audio/main-button.mp3"></audio>
+
+    <header class="header">
+      <div class="text-box">
+        <h1 class="heading-primary">
+          <span
+            class="heading-primary-main"
+            onmouseover="PlaySound('book-reader')"
+            onmouseout="StopSound('book-reader')"
+            >Book Reader</span
+          >
+          <span
+            class="heading-primary-sub"
+            onmouseover="PlaySound('secondary-heading')"
+            onmouseout="StopSound('secondary-heading')"
+            >Education is a gift every kid deserves.
+          </span>
+        </h1>
+
+        <a
+          href="books.html"
+          class="btn btn-white btn-animated"
+          onmouseover="PlaySound('main-button')"
+          onmouseout="StopSound('main-button')"
+          >Discover all Books</a
+        >
+        <!-- <div class="cards card-animated">
+          <button id="read-card">Read Books</button>
+        </div> -->
+      </div>
+    </header>
+    <!-- <footer id="footer">
+      <p class="u-center-text footer-primary">
+        Built with <i class="fa fa-heart"></i> for students by students in 2020.
+      </p>
+    </footer> -->
+  </body>
+</html>

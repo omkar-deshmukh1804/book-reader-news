@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icon-font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/book-favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/589850ed4a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Book Reader</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <a
+        id="logo-link"
+        onmouseover="PlaySound('book-reader')"
+        onmouseout="StopSound('book-reader')"
+        href="index.html"
+      >
+        <h1 class="logo">
+          <span class="text-primary">
+            <i class="fas fa-book-open"></i> Book</span
+          >Reader
+        </h1>
+      </a>
+
+      <ul>
+        <li>
+          <a
+            onmouseover="PlaySound('home')"
+            onmouseout="StopSound('home')"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('books')"
+            onmouseout="StopSound('books')"
+            href="books.html"
+            >Books</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('about')"
+            onmouseout="StopSound('about')"
+            href="#about"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('contact')"
+            onmouseout="StopSound('contact')"
+            href="#contact"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <audio id="home" src="audio/home.mp3"></audio>
+    <audio id="books" src="audio/books.mp3"></audio>
+    <audio id="about" src="audio/about.mp3"></audio>
+    <audio id="contact" src="audio/contact.mp3"></audio>
+    <audio id="book-reader" src="audio/book-reader.mp3"></audio>
+    <audio id="read-books" src="audio/read-books.mp3"></audio>
+    <audio id="english" src="audio/english.mp3"></audio>
+    <audio id="history" src="audio/history.mp3"></audio>
+    <audio id="geography" src="audio/geography.mp3"></audio>
+
+    <!-- Section: Books -->
+    <section class="books">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2
+          onmouseover="PlaySound('read-books')"
+          onmouseout="StopSound('read-books')"
+          class="heading-secondary"
+        >
+          Read Books
+        </h2>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-3">
+          <a
+            onmouseover="PlaySound('english')"
+            onmouseout="StopSound('english')"
+            href="english.html"
+            target="_blank"
+          >
+            <div class="book-box">
+              <i class="book-icon icon-basic-book-pen"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">English</h3>
+              <p class="book-text u-font-large">
+                To be, or not to be: that is the question
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="book-box">
+            <a
+              onmouseover="PlaySound('history')"
+              onmouseout="StopSound('history')"
+              href="history.html"
+              target="_blank"
+            >
+              <i class="book-icon icon-basic-compass"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">History</h3>
+              <p class="book-text u-font-large">
+                Those who forget the history are condemn to repeat it
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="book-box">
+            <a
+              onmouseover="PlaySound('geography')"
+              onmouseout="StopSound('geography')"
+              href="geography.html"
+              target="_blank"
+            >
+              <i class="book-icon icon-basic-world"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">Geography</h3>
+              <p class="book-text u-font-large">
+                Exploring the unexplored, a wanderlust journey
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/70da093a0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="img/book-favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>PDF Viewer</title>
+  </head>
+  <body>
+    <nav id="navbar" >
+      <a
+        id="logo-link"
+        onmouseover="PlaySound('book-reader')"
+        onmouseout="StopSound('book-reader')"
+        href="index.html"
+      >
+        <h1 class="logo">
+          <span class="text-primary">
+            <i class="fas fa-book-open"></i> Book</span
+          >Reader
+        </h1>
+      </a>
+
+      <ul>
+        <li>
+          <a
+            onmouseover="PlaySound('home')"
+            onmouseout="StopSound('home')"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('books')"
+            onmouseout="StopSound('books')"
+            href="books.html"
+            >Books</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('about')"
+            onmouseout="StopSound('about')"
+            href="#about"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('contact')"
+            onmouseout="StopSound('contact')"
+            href="#contact"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <audio id="home" src="audio/home.mp3"></audio>
+    <audio id="books" src="audio/books.mp3"></audio>
+    <audio id="about" src="audio/about.mp3"></audio>
+    <audio id="contact" src="audio/contact.mp3"></audio>
+    <audio id="book-reader" src="audio/book-reader.mp3"></audio>
+    <audio id="prev-page" src="audio/prev-page.mp3"></audio>
+    <audio id="next-page" src="audio/next-page.mp3"></audio>
+    <audio id="speak" src="audio/speak.mp3"></audio>
+    <audio id="eng-audio-1" src="audio/english/eng-page1.mp3"></audio>
+    <audio id="eng-audio-2" src="audio/english/eng-page2.mp3"></audio>
+    <audio id="eng-audio-3" src="audio/english/eng-page3.mp3"></audio>
+
+    <div class="books behind" >
+      <!-- <div id="msg" class="msg text-center"></div> -->
+        <div class="container u-margin-top-big-reverse">
+          <p class="page-info text-center">
+            <strong>English</strong>  - Page <span id="page-num"></span> of <span id="page-count"></span>
+          </p>
+          <canvas class="canvas" id="pdf-render"></canvas> <br />
+          <div class="button-parent">
+
+            <button
+              onmouseover="PlaySound('prev-page')"
+              onmouseout="StopSound('prev-page')"
+              class="btn"
+              id="prev-page-btn"
+            >
+              <!-- <i class="fas fa-arrow-circle-left"></i>  -->
+              
+              Prev Page
+            </button>
+            <button
+              onmouseover="PlaySound('next-page')"
+              onmouseout="StopSound('next-page')"
+              class="btn "
+              id="next-page-btn"
+            >
+              Next Page 
+              <!-- <i class="fas fa-arrow-circle-right"></i> -->
+            </button>
+
+  
+            <button
+              onmouseover=""
+              onmouseout=""
+              class="btn"
+              id="speak-btn"
+            >
+              <strong>Speak</strong>
+            </button>
+          </div> 
+        </div>
+       
+      </section>
+
+
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+    <script defer src="js/english.js"></script>
+  </body>
+</html>
+
+
