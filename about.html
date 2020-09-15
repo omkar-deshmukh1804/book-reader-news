@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/icon-font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/book-favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/589850ed4a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script async src="js/main.js"></script>
+
+    <title>Book Reader</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <a
+        id="logo-link"
+        onmouseover="PlaySound('book-reader')"
+        onmouseout="StopSound('book-reader')"
+        href="index.html"
+      >
+        <h1 class="logo">
+          <span class="text-primary">
+            <i class="fas fa-book-open"></i> Book</span
+          >Reader
+        </h1>
+      </a>
+
+      <ul>
+        <li>
+          <a
+            onmouseover="PlaySound('home')"
+            onmouseout="StopSound('home')"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('books')"
+            onmouseout="StopSound('books')"
+            href="books.html"
+            >Books</a
+          >
+        </li>
+        <li>
+          <a
+              onmouseover="PlaySound('news')"
+              onmouseout="StopSound('news')"
+              href="news.html" 
+          >News</a>
+      
+      </li>
+        <li class="u-px-medium">
+          <a
+            onmouseover="PlaySound('about')"
+            onmouseout="StopSound('about')"
+            href="#about"
+            >About</a
+          >
+        </li>
+        <!-- <li>
+          <a
+            onmouseover="PlaySound('contact')"
+            onmouseout="StopSound('contact')"
+            href="#contact"
+            >Contact</a
+          >
+        </li> -->
+      </ul>
+    </nav>
+
+    <audio id="home" src="audio/home.mp3"></audio>
+    <audio id="books" src="audio/books.mp3"></audio>
+    <audio id="about" src="audio/about.mp3"></audio>
+    <audio id="contact" src="audio/contact.mp3"></audio>
+    <audio id="news" src="audio/news.mp3"></audio>
+    <audio id="book-reader" src="audio/book-reader.mp3"></audio>
+    <audio id="about" src="audio/about.mp3"></audio>
+    <audio id="objective" src="audio/About/objective.mp3"></audio>
+    <audio id="how-works" src="audio/About/how-works.mp3"></audio>
+    <audio id="h3-sub1" src="audio/About/h3-1.mp3"></audio>
+    <audio id="h3-sub2" src="audio/About/h3-2.mp3"></audio>
+    <audio id="meet" src="audio/About/meet.mp3"></audio>
+    <audio id="mam" src="audio/About/mam.mp3"></audio>
+    <audio id="vinit" src="audio/About/vinit.mp3"></audio>
+    <audio id="omkar" src="audio/About/omkar.mp3"></audio>
+    <audio id="viraj" src="audio/About/viraj.mp3"></audio>
+    <audio id="mam-title" src="audio/About/mam-title.mp3"></audio>
+    <audio id="student-title" src="audio/About/student-title.mp3"></audio>
+    <audio id="footer" src="audio/About/footer.mp3"></audio>
+
+    <header class="header-2"></header>
+    <div class="u-margin-bottom-medium"></div>
+    <main>
+      <section class="section-about u-margin-bottom-huge">
+        <div
+          onmouseover="PlaySound('about')"
+          onmouseout="StopSound('about')"
+          class="u-center-text u-margin-top-big"
+        >
+          <h2 class="heading-secondary-about">
+            About
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-2">
+            <h3
+              onmouseover="PlaySound('objective')"
+              onmouseout="StopSound('objective')"
+              class="heading-tertiary u-margin-bottom-small"
+            >
+              Our Objective
+            </h3>
+
+            <p
+              class="paragraph"
+              onmouseover="PlaySound('h3-sub1')"
+              onmouseout="StopSound('h3-sub1')"
+            >
+              Our goal is to bridge the gaps the visually impaired students face
+              to provide a solution which can make knowledge extraction and
+              learning a fun process.
+            </p>
+
+            <h3
+              class="heading-tertiary u-margin-bottom-small"
+              onmouseover="PlaySound('how-works')"
+              onmouseout="StopSound('how-works')"
+            >
+              How it works?
+            </h3>
+            <p
+              class="paragraph"
+              onmouseover="PlaySound('h3-sub2')"
+              onmouseout="StopSound('h3-sub2')"
+            >
+              Students can select books and simply select a page to listen to
+              the page of their choice. The app uses OCR with TTS technology,
+              where data from the books are scanned and converted into audio
+              format.
+            </p>
+          </div>
+          <div class="col-1-of-2">
+            <div class="composition">
+              <img
+                src="img/child-img/child-img-1.jpg"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+              />
+              <img
+                src="img/child-img/child-img-4.jpg"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+              />
+              <img
+                src="img/child-img/child-img-3.jpg"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-about u-margin-bottom-medium">
+        <div
+          class="u-center-text u-margin-top-medium"
+          onmouseover="PlaySound('meet')"
+          onmouseout="StopSound('meet')"
+        >
+          <h2 class="heading-secondary-about">
+            Meet The Team
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="composition">
+            <div class="u-center-text u-margin-bottom-medium">
+              <img src="img/avatar/maam.png" alt="Photo 1" />
+              <div class="avatar-text">
+                <h3
+                  onmouseover="PlaySound('mam')"
+                  onmouseout="StopSound('mam')"
+                  class="heading-secondary-about avatar-h3"
+                >
+                  Mohini Chaudhari
+                </h3>
+                <h4
+                  onmouseover="PlaySound('mam-title')"
+                  onmouseout="StopSound('mam-title')"
+                  class="avatar-h4"
+                >
+                  Assistant Professor, VIT (Mumbai)
+                </h4>
+              </div>
+            </div>
+            <div class="col-1-of-3">
+              <img src="img/avatar/vinit.png" alt="Photo 1" />
+              <div class="avatar-text">
+                <h3
+                  onmouseover="PlaySound('vinit')"
+                  onmouseout="StopSound('vinit')"
+                  class="avatar-h3"
+                >
+                  Vinit Raut
+                </h3>
+                <h4
+                  onmouseover="PlaySound('student-title')"
+                  onmouseout="StopSound('student-title')"
+                  class="avatar-h4"
+                >
+                  B.E Compter Engineering, VIT (Mumbai)
+                </h4>
+              </div>
+            </div>
+            <div class="col-1-of-3">
+              <img src="img/avatar/omkar.png" alt="Photo 1" />
+              <div class="avatar-text">
+                <h3
+                  onmouseover="PlaySound('omkar')"
+                  onmouseout="StopSound('omkar')"
+                  class="avatar-h3"
+                >
+                  Omkar Deshmukh
+                </h3>
+                <h4
+                  onmouseover="PlaySound('student-title')"
+                  onmouseout="StopSound('student-title')"
+                  class="avatar-h4"
+                >
+                  B.E Compter Engineering, VIT (Mumbai)
+                </h4>
+              </div>
+            </div>
+            <div class="col-1-of-3">
+              <img src="img/avatar/viraj.png" alt="Photo 1" />
+              <div class="avatar-text">
+                <h3
+                  onmouseover="PlaySound('viraj')"
+                  onmouseout="StopSound('viraj')"
+                  class="avatar-h3"
+                >
+                  Viraj Kamtekar
+                </h3>
+                <h4
+                  onmouseover="PlaySound('student-title')"
+                  onmouseout="StopSound('student-title')"
+                  class="avatar-h4"
+                >
+                  B.E Compter Engineering, VIT (Mumbai)
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        onmouseover="PlaySound('footer')"
+        onmouseout="StopSound('footer')"
+        id="footer"
+      >
+        <p class="u-center-text footer-primary">
+          Built with <i class="fas fa-heart"></i> for students by students in
+          2020
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

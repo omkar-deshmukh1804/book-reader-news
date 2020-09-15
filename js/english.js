@@ -12,14 +12,14 @@ const StopSound = (soundobj) => {
 };
 
 /* PDF render */
-const url = '../docs/sample-eng/sample-3.pdf';
+const url = '../docs/english/english-1-20.pdf';
 
 let pdfDoc = null,
   pageNum = 1,
   pageIsRendering = false,
   pageNumIsPending = null;
 
-const scale = 0.9,
+const scale = 0.8,
   canvas = document.querySelector('#pdf-render'),
   ctx = canvas.getContext('2d');
 
@@ -83,9 +83,13 @@ const showNextPage = () => {
 };
 
 const setAudioAttribute = () => {
-  const pageAudioId = document.querySelector('#speak-btn');
-  pageAudioId.setAttribute('onmouseover', `PlaySound('eng-audio-${pageNum}')`);
-  pageAudioId.setAttribute('onmouseout', `StopSound('eng-audio-${pageNum}')`);
+  // const pageAudioId = document.querySelector('#speak-btn');
+  const onhover = document.querySelector('.onhover');
+
+  // pageAudioId.setAttribute('onmouseover', `PlaySound('eng-${pageNum}')`);
+  // pageAudioId.setAttribute('onmouseout', `StopSound('eng-${pageNum}')`);
+  onhover.setAttribute('onmouseover', `PlaySound('eng-${pageNum}')`);
+  onhover.setAttribute('onmouseout', `StopSound('eng-${pageNum}')`);
 };
 setAudioAttribute();
 

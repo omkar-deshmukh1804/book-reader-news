@@ -7,28 +7,142 @@
       src="https://kit.fontawesome.com/70da093a0d.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/book-favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/style.css" />
     <title>PDF Viewer</title>
   </head>
   <body>
-    <div class="top-bar">
-      <button class="btn" id="prev-page">
-        <i class="fas fa-arrow-circle-left"></i> Prev Page
-      </button>
+    <nav id="navbar" >
+      <a
+        id="logo-link"
+        onmouseover="PlaySound('book-reader')"
+        onmouseout="StopSound('book-reader')"
+        href="index.html"
+      >
+        <h1 class="logo">
+          <span class="text-primary">
+            <i class="fas fa-book-open"></i> Book</span
+          >Reader
+        </h1>
+      </a>
 
-      <button class="btn" id="next-page">
-        Next Page <i class="fas fa-arrow-circle-right"></i>
-      </button>
+      <ul>
+        <li>
+          <a
+            onmouseover="PlaySound('home')"
+            onmouseout="StopSound('home')"
+            href="index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            onmouseover="PlaySound('books')"
+            onmouseout="StopSound('books')"
+            href="books.html"
+            >Books</a
+          >
+        </li>
+        <li class="u-px-medium">
+          <a
+            onmouseover="PlaySound('about')"
+            onmouseout="StopSound('about')"
+            href="about.html"
+            >About</a
+          >
+        </li>
+        <!-- <li>
+          <a
+            onmouseover="PlaySound('contact')"
+            onmouseout="StopSound('contact')"
+            href="#contact"
+            >Contact</a
+          >
+        </li> -->
+      </ul>
+    </nav>
 
-      <span class="page-info">
-        Page <span id="page-num"></span> of <span id="page-count"></span>
-      </span>
-    </div>
+    <audio id="home" src="audio/home.mp3"></audio>
+    <audio id="books" src="audio/books.mp3"></audio>
+    <audio id="about" src="audio/about.mp3"></audio>
+    <audio id="contact" src="audio/contact.mp3"></audio>
+    <audio id="book-reader" src="audio/book-reader.mp3"></audio>
+    <audio id="prev-page" src="audio/prev-page.mp3"></audio>
+    <audio id="next-page" src="audio/next-page.mp3"></audio>
+    <!-- <audio id="speak" src="audio/speak.mp3"></audio> -->
 
-    <canvas id="pdf-render"> </canvas>
+    <audio id="his-1" src="audio/history/his-1.mp3"></audio>
+    <audio id="his-2" src="audio/history/his-2.mp3"></audio>
+    <audio id="his-3" src="audio/history/his-3.mp3"></audio>
+    <audio id="his-4" src="audio/history/his-4.mp3"></audio>
+    <audio id="his-5" src="audio/history/his-5.mp3"></audio>
+    <audio id="his-6" src="audio/history/his-6.mp3"></audio>
+    <audio id="his-7" src="audio/history/his-7.mp3"></audio>
+    <audio id="his-8" src="audio/history/his-8.mp3"></audio>
+    <audio id="his-9" src="audio/history/his-9.mp3"></audio>
+    <audio id="his-10" src="audio/history/his-10.mp3"></audio>
+    <audio id="his-11" src="audio/history/his-11.mp3"></audio>
+    <audio id="his-12" src="audio/history/his-12.mp3"></audio>
+    <audio id="his-13" src="audio/history/his-13.mp3"></audio>
+    <audio id="his-14" src="audio/history/his-14.mp3"></audio>
+    <audio id="his-15" src="audio/history/his-15.mp3"></audio>
+    <audio id="his-16" src="audio/history/his-16.mp3"></audio>
+    <audio id="his-17" src="audio/history/his-17.mp3"></audio>
+    <audio id="his-18" src="audio/history/his-18.mp3"></audio>
+    <audio id="his-19" src="audio/history/his-19.mp3"></audio>
+    <audio id="his-20" src="audio/history/his-20.mp3"></audio>
+    <audio id="his-21" src="audio/history/his-21.mp3"></audio>
+    <audio id="his-22" src="audio/history/his-22.mp3"></audio>
+    <audio id="his-23" src="audio/history/his-23.mp3"></audio>
+    <audio id="his-24" src="audio/history/his-24.mp3"></audio>
+    <audio id="his-25" src="audio/history/his-25.mp3"></audio>
+    <audio id="his-26" src="audio/history/his-26.mp3"></audio>
+    <audio id="his-27" src="audio/history/his-27.mp3"></audio>
+    <audio id="his-28" src="audio/history/his-28.mp3"></audio>
+    <audio id="his-29" src="audio/history/his-29.mp3"></audio>
+    <audio id="his-30" src="audio/history/his-30.mp3"></audio>
+
+    <div class="books behind" >
+        <div class="container u-margin-top-big-reverse">
+          <p class="page-info text-center">
+            <strong>History</strong>  - Page <span id="page-num"></span> of <span id="page-count"></span>
+          </p>
+          <canvas class="canvas onhover" id="pdf-render"></canvas> <br />
+          <div class="button-parent">
+
+            <button
+              onmouseover="PlaySound('prev-page')"
+              onmouseout="StopSound('prev-page')"
+              class="btn"
+              id="prev-page-btn"
+            >
+              <i class="fas fa-arrow-circle-left"></i> 
+              
+              Prev Page
+            </button>
+            <button
+              onmouseover="PlaySound('next-page')"
+              onmouseout="StopSound('next-page')"
+              class="btn "
+              id="next-page-btn"
+            >
+              Next Page 
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+
+  
+           
+          </div> 
+        </div>
+       
+      </section>
+
 
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
 
-    <script src="main.js"></script>
+    <script defer src="js/history.js"></script>
   </body>
 </html>
+
+

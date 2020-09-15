@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/book-favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script
       src="https://kit.fontawesome.com/589850ed4a.js"
       crossorigin="anonymous"
@@ -28,9 +29,9 @@
         onmouseout="StopSound('book-reader')"
         href="index.html"
       >
-        <h1 class="logo">
-          <span class="text-primary">
-            <i class="fas fa-book-open"></i> Book</span
+        <h1 className="logo">
+          <span className="text-primary">
+            <i className="fas fa-book-open"></i> Book</span
           >Reader
         </h1>
       </a>
@@ -53,21 +54,29 @@
           >
         </li>
         <li>
+            <a
+                onmouseover="PlaySound('news')"
+                onmouseout="StopSound('news')"
+                href="news.html" 
+            >News</a>
+        
+        </li>
+        <li class="u-px-medium">
           <a
             onmouseover="PlaySound('about')"
             onmouseout="StopSound('about')"
-            href="#about"
+            href="about.html"
             >About</a
           >
         </li>
-        <li>
+        <!-- <li>
           <a
             onmouseover="PlaySound('contact')"
             onmouseout="StopSound('contact')"
             href="#contact"
             >Contact</a
           >
-        </li>
+        </li> -->
       </ul>
     </nav>
 
@@ -75,6 +84,7 @@
     <audio id="books" src="audio/books.mp3"></audio>
     <audio id="about" src="audio/about.mp3"></audio>
     <audio id="contact" src="audio/contact.mp3"></audio>
+    <audio id="news" src="audio/news.mp3"></audio>
     <audio id="book-reader" src="audio/book-reader.mp3"></audio>
     <audio id="secondary-heading" src="audio/heading-secondary.mp3"></audio>
     <audio id="main-button" src="audio/main-button.mp3"></audio>
@@ -103,15 +113,11 @@
           onmouseout="StopSound('main-button')"
           >Discover all Books</a
         >
-        <!-- <div class="cards card-animated">
-          <button id="read-card">Read Books</button>
-        </div> -->
       </div>
     </header>
-    <!-- <footer id="footer">
-      <p class="u-center-text footer-primary">
-        Built with <i class="fa fa-heart"></i> for students by students in 2020.
-      </p>
-    </footer> -->
   </body>
-</html>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  </html>

@@ -44,22 +44,22 @@
             >Books</a
           >
         </li>
-        <li>
+        <li class="u-px-medium">
           <a
             onmouseover="PlaySound('about')"
             onmouseout="StopSound('about')"
-            href="#about"
+            href="about.html"
             >About</a
           >
         </li>
-        <li>
+        <!-- <li>
           <a
             onmouseover="PlaySound('contact')"
             onmouseout="StopSound('contact')"
             href="#contact"
             >Contact</a
           >
-        </li>
+        </li> -->
       </ul>
     </nav>
 
@@ -70,18 +70,35 @@
     <audio id="book-reader" src="audio/book-reader.mp3"></audio>
     <audio id="prev-page" src="audio/prev-page.mp3"></audio>
     <audio id="next-page" src="audio/next-page.mp3"></audio>
-    <audio id="speak" src="audio/speak.mp3"></audio>
-    <audio id="eng-audio-1" src="audio/english/eng-page1.mp3"></audio>
-    <audio id="eng-audio-2" src="audio/english/eng-page2.mp3"></audio>
-    <audio id="eng-audio-3" src="audio/english/eng-page3.mp3"></audio>
+    <!-- <audio id="speak" src="audio/speak.mp3"></audio> -->
+
+    <audio id="eng-1" src="audio/english/eng-1.mp3"></audio>
+    <audio id="eng-2" src="audio/english/eng-2.mp3"></audio>
+    <audio id="eng-3" src="audio/english/eng-3.mp3"></audio>
+    <audio id="eng-4" src="audio/english/eng-4.mp3"></audio>
+    <audio id="eng-5" src="audio/english/eng-5.mp3"></audio>
+    <audio id="eng-6" src="audio/english/eng-6.mp3"></audio>
+    <audio id="eng-7" src="audio/english/eng-7.mp3"></audio>
+    <audio id="eng-8" src="audio/english/eng-8.mp3"></audio>
+    <audio id="eng-9" src="audio/english/eng-9.mp3"></audio>
+    <audio id="eng-10" src="audio/english/eng-10.mp3"></audio>
+    <audio id="eng-11" src="audio/english/eng-11.mp3"></audio>
+    <audio id="eng-12" src="audio/english/eng-12.mp3"></audio>
+    <audio id="eng-13" src="audio/english/eng-13.mp3"></audio>
+    <audio id="eng-14" src="audio/english/eng-14.mp3"></audio>
+    <audio id="eng-15" src="audio/english/eng-15.mp3"></audio>
+    <audio id="eng-16" src="audio/english/eng-16.mp3"></audio>
+    <audio id="eng-17" src="audio/english/eng-17.mp3"></audio>
+    <audio id="eng-18" src="audio/english/eng-18.mp3"></audio>
+    <audio id="eng-19" src="audio/english/eng-19.mp3"></audio>
+    <audio id="eng-20" src="audio/english/eng-20.mp3"></audio>
 
     <div class="books behind" >
-      <!-- <div id="msg" class="msg text-center"></div> -->
         <div class="container u-margin-top-big-reverse">
           <p class="page-info text-center">
             <strong>English</strong>  - Page <span id="page-num"></span> of <span id="page-count"></span>
           </p>
-          <canvas class="canvas" id="pdf-render"></canvas> <br />
+          <canvas class="canvas onhover" id="pdf-render"></canvas> <br />
           <div class="button-parent">
 
             <button
@@ -90,7 +107,7 @@
               class="btn"
               id="prev-page-btn"
             >
-              <!-- <i class="fas fa-arrow-circle-left"></i>  -->
+              <i class="fas fa-arrow-circle-left"></i> 
               
               Prev Page
             </button>
@@ -101,10 +118,10 @@
               id="next-page-btn"
             >
               Next Page 
-              <!-- <i class="fas fa-arrow-circle-right"></i> -->
+              <i class="fas fa-arrow-circle-right"></i>
             </button>
 
-  
+<!--   
             <button
               onmouseover=""
               onmouseout=""
@@ -112,7 +129,7 @@
               id="speak-btn"
             >
               <strong>Speak</strong>
-            </button>
+            </button> -->
           </div> 
         </div>
        

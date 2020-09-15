@@ -52,20 +52,28 @@
         </li>
         <li>
           <a
+              onmouseover="PlaySound('news')"
+              onmouseout="StopSound('news')"
+              href="news.html" 
+          >News</a>
+      
+      </li>
+        <li class="u-px-medium">
+          <a
             onmouseover="PlaySound('about')"
             onmouseout="StopSound('about')"
-            href="#about"
+            href="about.html"
             >About</a
           >
         </li>
-        <li>
+        <!-- <li>
           <a
             onmouseover="PlaySound('contact')"
             onmouseout="StopSound('contact')"
             href="#contact"
             >Contact</a
           >
-        </li>
+        </li> -->
       </ul>
     </nav>
 
@@ -73,6 +81,7 @@
     <audio id="books" src="audio/books.mp3"></audio>
     <audio id="about" src="audio/about.mp3"></audio>
     <audio id="contact" src="audio/contact.mp3"></audio>
+    <audio id="news" src="audio/news.mp3"></audio>
     <audio id="book-reader" src="audio/book-reader.mp3"></audio>
     <audio id="read-books" src="audio/read-books.mp3"></audio>
     <audio id="english" src="audio/english.mp3"></audio>
