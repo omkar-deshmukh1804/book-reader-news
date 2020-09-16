@@ -9,9 +9,9 @@
     />
 
     <link rel="stylesheet" href="css/icon-font.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/book-favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/589850ed4a.js"
       crossorigin="anonymous"
@@ -21,20 +21,7 @@
     <script src="/js/main.js"></script>
     <title>Book Reader</title>
   </head>
-  <body>
-    <script>
-      function PlaySound(soundobj) {
-      var thissound = document.getElementById(soundobj);
-      thissound.play();
-    }
-
-    function StopSound(soundobj) {
-      var thissound = document.getElementById(soundobj);
-      thissound.pause();
-      thissound.currentTime = 0;
-    }
-
-    </script>
+  <body  onload="document.getElementById('news-welcome').play()">
     <!-- Navbar -->
     <nav id="navbar">
       <a
@@ -102,6 +89,7 @@
     <audio id="book-reader" src="audio/book-reader.mp3"></audio>
     <audio id="secondary-heading" src="audio/heading-secondary.mp3"></audio>
     <audio id="main-button" src="audio/main-button.mp3"></audio>
+    <audio id="news-welcome" src="/audio/news-welcome.mp3"></audio>
 
     <div id="audioplace">
 

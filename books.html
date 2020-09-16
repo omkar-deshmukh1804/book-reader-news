@@ -17,7 +17,7 @@
     ></script>
     <title>Book Reader</title>
   </head>
-  <body>
+  <body  onload="document.getElementById('books-welcome').play()">
     <!-- Navbar -->
     <nav id="navbar">
       <a
@@ -87,6 +87,7 @@
     <audio id="english" src="audio/english.mp3"></audio>
     <audio id="history" src="audio/history.mp3"></audio>
     <audio id="geography" src="audio/geography.mp3"></audio>
+    <audio id="books-welcome" src="/audio/books-welcome.mp3"></audio>
 
     <!-- Section: Books -->
     <section class="books">

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
     "jsonserver": "json-server --watch db.json --port 3000"
   },

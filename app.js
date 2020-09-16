@@ -4,20 +4,20 @@ const express = require('express');
 const fetch = require('node-fetch');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
-
+let articles2 = null;
 var app = express();
 
 const api_url =
   'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=31295da7aabb455e85a9cab94db6f707';
 
-  
-
  async function getData() {
   const res = await fetch(api_url);
   const data = await res.json();
   const articles = data.articles; //storing articles from data
+  articles2 = data.articles;
   const imgURLS = [];
   const title = [];
+   console.log(`This are the arcticles `, articles);
   
      axios
        .put("http://localhost:3000/news/132", {
@@ -46,7 +46,7 @@ const api_url =
 
   for (let i = 0; i < title.length; i++) {
     // for 10 titles present in array, generating audio file using gtts
-    const element = title[i];
+    const element = title[i] + '\n' +  articles[i].content;
     var gtts = new gTTS(element, 'en');
     gtts.save(`./title${i + 1}.mp3`, function (err, result) {
       if (err) {
@@ -56,22 +56,25 @@ const api_url =
     });
    }
 
-   for (let i = 0; i < articles.length; i++) {
-    // for 10 titles present in array, generating audio file using gtts
-    const element = articles[i].content;
-    var gtts = new gTTS(element, 'en');
-    gtts.save(`./content${i + 1}.mp3`, function (err, result) {
-      if (err) {
-        throw new Error(err);
-      }
-      console.log('Success in generating content audio!');
-    });
-   }
+  //  for (let i = 0; i < articles.length; i++) {
+  //   // for 10 titles present in array, generating audio file using gtts
+  //   const element = articles[i].content;
+  //   var gtts = new gTTS(element, 'en');
+  //   gtts.save(`./content${i + 1}.mp3`, function (err, result) {
+  //     if (err) {
+  //       throw new Error(err);
+  //     }
+  //     console.log('Success in generating content audio!');
+  //   });
+  //  }
 }
 getData();
+setInterval(getData, 36000)
 
 const port = process.env.PORT || 5001;
 
 app.listen(port, () => {
   console.log(`Server running on port ${port} `);
 });
+
+

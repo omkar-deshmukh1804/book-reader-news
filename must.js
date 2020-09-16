@@ -13,8 +13,8 @@ axios
         a.src = `/content${x+1}.mp3`
         document.getElementById("audioplace").appendChild(a);
         var b = document.createElement('audio')
-        b.id = `newTitle${res.data[0].article[x].publishedAt}`
-        a.src = `/title${x+1}.mp3`
+        b.id = `newsTitle${res.data[0].article[x].publishedAt}`
+        b.src = `/title${x+1}.mp3`
         document.getElementById("audioplace").appendChild(b);
         
       }
@@ -26,7 +26,7 @@ axios
             '<div class="card-body bg-success">'+
             '<img src={{urlToImage}} class="card-img-top" alt="default"  style="width : 25%; float : left" />' +
             `<div class="card-title text-light" id="newsTitle{{publishedAt}}" onmouseover="document.getElementById('newsTitle{{publishedAt}}').play();" onmouseout="document.getElementById('newsTitle{{publishedAt}}').pause();"><h4>{{title}}</h4></div>` +
-            `<div class="card-text mt-4 text-center text-light" id="newsContent{{publishedAt}}" onmouseover="document.getElementById('newsContent{{publishedAt}}').play();" onmouseout="document.getElementById('newsContent{{publishedAt}}').pause();"><h5>{{content}}</h5></div>`+
+            `<div class="card-text mt-4 text-center text-light" id="newsContent{{publishedAt}}"><h5>{{content}}</h5></div>`+
             '</div> '+
             '</div>'
           ;
